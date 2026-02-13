@@ -59,12 +59,12 @@ export interface SearchResult {
   matchText: string;
 }
 
-export type EvidenceLabel = 'Sterk bewijs' | 'Matig bewijs' | 'Opkomend bewijs';
+export type EvidenceLabel = 'Strong evidence' | 'Moderate evidence' | 'Emerging evidence';
 
 export const evidenceLabels: Record<1 | 2 | 3, EvidenceLabel> = {
-  3: 'Sterk bewijs',
-  2: 'Matig bewijs',
-  1: 'Opkomend bewijs',
+  3: 'Strong evidence',
+  2: 'Moderate evidence',
+  1: 'Emerging evidence',
 };
 
 export const evidenceColors: Record<1 | 2 | 3, string> = {

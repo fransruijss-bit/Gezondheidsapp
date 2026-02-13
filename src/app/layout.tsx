@@ -5,16 +5,16 @@ import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Gezondheidsencyclopedie',
-    template: '%s | Gezondheidsencyclopedie',
+    default: 'The Healthy Nerd',
+    template: '%s | The Healthy Nerd',
   },
   description:
-    'Wetenschappelijk onderbouwde gezondheidskennis, toegankelijk gemaakt in drie lagen. Van actionable advies tot de papers zelf.',
+    'Science-backed health knowledge made practical in three layers, from actionable guidance to the original research papers.',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Gezondheidsencyclopedie',
+    title: 'The Healthy Nerd',
   },
 };
 
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl">
+    <html lang="en">
       <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>

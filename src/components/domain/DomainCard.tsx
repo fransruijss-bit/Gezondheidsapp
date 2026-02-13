@@ -34,7 +34,7 @@ export default function DomainCard({ domain, topicCount }: DomainCardProps) {
           {domain.description}
         </p>
         <div className="mt-4 text-xs font-medium text-gray-500">
-          {topicCount} onderwerpen
+          {topicCount} topics
         </div>
       </div>
     </Link>

@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-14">
           <Link href="/" className="font-bold text-lg text-gray-900 shrink-0">
-            Gezondheids<span className="text-slaap">encyclopedie</span>
+            The Healthy <span className="text-slaap">Nerd</span>
           </Link>
 
           <div className="hidden md:block flex-1 max-w-md mx-6">
@@ -21,19 +21,19 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-6 text-sm">
             <Link href="/slaap" className="text-gray-600 hover:text-slaap transition-colors">
-              🌙 Slaap
+              🌙 Sleep
             </Link>
             <Link href="/voeding" className="text-gray-600 hover:text-voeding transition-colors">
-              🥦 Voeding
+              🥦 Nutrition
             </Link>
             <Link href="/beweging" className="text-gray-600 hover:text-beweging transition-colors">
-              🏋️ Beweging
+              🏋️ Movement
             </Link>
             <Link href="/gezondheidsadvies" className="text-gray-600 hover:text-gray-900 transition-colors">
-              ✅ Best advies
+              ✅ Best guide
             </Link>
             <Link href="/over" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Over
+              About
             </Link>
           </div>
 
@@ -64,35 +64,35 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="px-3 py-2 rounded-lg text-gray-700 hover:bg-slaap-light transition-colors"
               >
-                🌙 Slaap
+                🌙 Sleep
               </Link>
               <Link
                 href="/voeding"
                 onClick={() => setMenuOpen(false)}
                 className="px-3 py-2 rounded-lg text-gray-700 hover:bg-voeding-light transition-colors"
               >
-                🥦 Voeding
+                🥦 Nutrition
               </Link>
               <Link
                 href="/beweging"
                 onClick={() => setMenuOpen(false)}
                 className="px-3 py-2 rounded-lg text-gray-700 hover:bg-beweging-light transition-colors"
               >
-                🏋️ Beweging
+                🏋️ Movement
               </Link>
               <Link
                 href="/gezondheidsadvies"
                 onClick={() => setMenuOpen(false)}
                 className="px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
               >
-                ✅ Best advies
+                ✅ Best guide
               </Link>
               <Link
                 href="/over"
                 onClick={() => setMenuOpen(false)}
                 className="px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
               >
-                Over deze app
+                About this app
               </Link>
             </div>
           </div>

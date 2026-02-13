@@ -7,33 +7,33 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-bold text-gray-900 mb-3">Gezondheidsencyclopedie</h3>
+            <h3 className="font-bold text-gray-900 mb-3">The Healthy Nerd</h3>
             <p className="text-sm text-gray-500 leading-relaxed">
-              Wetenschappelijk onderbouwde gezondheidskennis, toegankelijk gemaakt in drie lagen.
+              Science-backed health knowledge made practical in three layers.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-3 text-sm">Domeinen</h4>
+            <h4 className="font-semibold text-gray-900 mb-3 text-sm">Domains</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/slaap" className="text-gray-500 hover:text-slaap transition-colors">
-                  🌙 Slaap
+                  🌙 Sleep
                 </Link>
               </li>
               <li>
                 <Link href="/voeding" className="text-gray-500 hover:text-voeding transition-colors">
-                  🥦 Voeding
+                  🥦 Nutrition
                 </Link>
               </li>
               <li>
                 <Link href="/beweging" className="text-gray-500 hover:text-beweging transition-colors">
-                  🏋️ Beweging
+                  🏋️ Movement
                 </Link>
               </li>
               <li>
                 <Link href="/gezondheidsadvies" className="text-gray-500 hover:text-gray-900 transition-colors">
-                  ✅ Best advies
+                  ✅ Best guide
                 </Link>
               </li>
             </ul>
@@ -44,7 +44,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/over" className="text-gray-500 hover:text-gray-900 transition-colors">
-                  Over & Methodologie
+                  About & Methodology
                 </Link>
               </li>
               <li>
@@ -56,10 +56,10 @@ export default function Footer() {
 
         <div className="border-t border-gray-100 mt-8 pt-6 text-center text-xs text-gray-400">
           <p>
-            Deze app biedt geen medisch advies. Raadpleeg altijd een arts voor persoonlijke gezondheidsvragen.
+            This app does not provide medical advice. Always consult a physician for personal health questions.
           </p>
           <p className="mt-1">
-            &copy; {new Date().getFullYear()} Gezondheidsencyclopedie
+            &copy; {new Date().getFullYear()} The Healthy Nerd
           </p>
         </div>
       </div>

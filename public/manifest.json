@@ -1,7 +1,7 @@
 {
-  "name": "Gezondheidsencyclopedie",
-  "short_name": "Gezondheid",
-  "description": "Wetenschappelijk onderbouwde gezondheidskennis in drie lagen",
+  "name": "The Healthy Nerd",
+  "short_name": "Healthy Nerd",
+  "description": "Science-backed health knowledge in three practical layers",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAFAFA",

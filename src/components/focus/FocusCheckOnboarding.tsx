@@ -113,7 +113,7 @@ export default function FocusCheckOnboarding() {
       <div className="max-w-3xl mx-auto px-4 py-10 md:py-14">
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-gray-900">Focus Check</h1>
-          <p className="text-gray-600 mt-2">Beantwoord 10 korte vragen en krijg direct top adviezen uit onze database.</p>
+          <p className="text-gray-600 mt-2">Answer 10 short questions and instantly get top recommendations from our database.</p>
         </div>
 
         {!result && currentQuestion && (
@@ -137,7 +137,7 @@ export default function FocusCheckOnboarding() {
                 className="px-4 py-2 rounded-lg border border-gray-200 text-gray-600 disabled:opacity-40"
                 disabled={step === 0}
               >
-                Vorige
+                Previous
               </button>
 
               {isLastQuestion ? (
@@ -147,7 +147,7 @@ export default function FocusCheckOnboarding() {
                   disabled={!canContinue || loading}
                   className="px-5 py-2.5 rounded-lg bg-slaap text-white font-medium disabled:opacity-50"
                 >
-                  {loading ? 'Bezig...' : 'Bekijk mijn top adviezen'}
+                  {loading ? 'Loading...' : 'See my top recommendations'}
                 </button>
               ) : (
                 <button
@@ -156,7 +156,7 @@ export default function FocusCheckOnboarding() {
                   disabled={!canContinue}
                   className="px-5 py-2.5 rounded-lg bg-slaap text-white font-medium disabled:opacity-50"
                 >
-                  Volgende
+                  Next
                 </button>
               )}
             </div>
@@ -176,14 +176,14 @@ export default function FocusCheckOnboarding() {
                 onClick={() => setVisible(false)}
                 className="px-5 py-2.5 rounded-lg bg-slaap text-white font-medium"
               >
-                Verder naar home
+                Continue to home
               </button>
               <button
                 type="button"
                 onClick={() => window.dispatchEvent(new Event('focus-check:redo'))}
                 className="px-5 py-2.5 rounded-lg border border-gray-200 text-gray-700"
               >
-                Focus check opnieuw doen
+                Retake Focus Check
               </button>
             </div>
           </div>

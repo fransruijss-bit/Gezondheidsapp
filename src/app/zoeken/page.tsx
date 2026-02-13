@@ -13,7 +13,7 @@ function SearchContent() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold text-gray-900 mb-6">Zoeken</h1>
+      <h1 className="text-2xl font-bold text-gray-900 mb-6">Search</h1>
 
       <div className="mb-8">
         <SearchBar />
@@ -21,7 +21,7 @@ function SearchContent() {
 
       {query && (
         <div className="mb-4 text-sm text-gray-500">
-          {results.length} resultaten voor &ldquo;{query}&rdquo;
+          {results.length} results for &ldquo;{query}&rdquo;
         </div>
       )}
 
@@ -30,9 +30,9 @@ function SearchContent() {
   );
 }
 
-export default function ZoekenPage() {
+export default function SearchPage() {
   return (
-    <Suspense fallback={<div className="max-w-3xl mx-auto px-4 py-8">Laden...</div>}>
+    <Suspense fallback={<div className="max-w-3xl mx-auto px-4 py-8">Loading...</div>}>
       <SearchContent />
     </Suspense>
   );

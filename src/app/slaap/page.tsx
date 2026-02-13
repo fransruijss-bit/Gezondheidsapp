@@ -5,17 +5,17 @@ import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import TopicCard from '@/components/topic/TopicCard';
 
 export const metadata: Metadata = {
-  title: 'Slaap',
-  description: 'Ontdek wetenschappelijk onderbouwde inzichten over slaaphygiëne, circadiaan ritme, lichtblootstelling en meer.',
+  title: 'Sleep',
+  description: 'Discover science-backed insights on sleep hygiene, circadian rhythm, light exposure, and more.',
 };
 
-export default function SlaapPage() {
+export default function SleepPage() {
   const domain = getDomain('slaap')!;
   const topics = getTopicsByDomain('slaap');
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
-      <Breadcrumbs items={[{ label: 'Slaap' }]} />
+      <Breadcrumbs items={[{ label: 'Sleep' }]} />
 
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-4">

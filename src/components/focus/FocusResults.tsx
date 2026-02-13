@@ -11,16 +11,16 @@ interface FocusResultsProps {
 }
 
 const domainLabel: Record<FocusDomain, string> = {
-  nutrition: 'Voeding',
-  sleep: 'Slaap',
-  movement: 'Beweging',
+  nutrition: 'Nutrition',
+  sleep: 'Sleep',
+  movement: 'Movement',
 };
 
 export default function FocusResults({ topDomains, topTags, recommendations }: FocusResultsProps) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-gray-900">Jouw Focus Check resultaten</h2>
-      <p className="text-gray-600 mt-2">Top focusgebieden op basis van jouw antwoorden.</p>
+      <h2 className="text-2xl font-bold text-gray-900">Your Focus Check results</h2>
+      <p className="text-gray-600 mt-2">Top focus areas based on your answers.</p>
 
       <div className="mt-5 flex flex-wrap gap-2">
         {topDomains.map((domain) => (
@@ -38,7 +38,7 @@ export default function FocusResults({ topDomains, topTags, recommendations }: F
         ))}
       </div>
 
-      <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Top adviezen voor jou</h3>
+      <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Top recommendations for you</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {recommendations.map((item) => (
           <article key={item.topicId} className="rounded-xl border border-gray-200 p-4 bg-white">
@@ -49,13 +49,13 @@ export default function FocusResults({ topDomains, topTags, recommendations }: F
                 <span key={tag} className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-500">{tag}</span>
               ))}
             </div>
-            <p className="text-xs text-gray-500 mt-3">Leestijd ± {item.readTimeMinutes} min · Evidence {item.evidenceScore}/3</p>
+            <p className="text-xs text-gray-500 mt-3">Read time ~ {item.readTimeMinutes} min · Evidence {item.evidenceScore}/3</p>
             <Link
               href={`/${item.domainId}/${item.slug}`}
               className="inline-flex mt-3 text-sm font-medium text-slaap hover:underline"
               onClick={() => trackEvent('result_clicked', { topicId: item.topicId })}
             >
-              Lees meer →
+              Read more →
             </Link>
           </article>
         ))}

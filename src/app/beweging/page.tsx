@@ -5,17 +5,17 @@ import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import TopicCard from '@/components/topic/TopicCard';
 
 export const metadata: Metadata = {
-  title: 'Beweging',
-  description: 'Ontdek wetenschappelijk onderbouwde inzichten over krachttraining, cardio, herstel en meer.',
+  title: 'Movement',
+  description: 'Discover science-backed insights on strength training, cardio, recovery, and more.',
 };
 
-export default function BewegingPage() {
+export default function MovementPage() {
   const domain = getDomain('beweging')!;
   const topics = getTopicsByDomain('beweging');
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
-      <Breadcrumbs items={[{ label: 'Beweging' }]} />
+      <Breadcrumbs items={[{ label: 'Movement' }]} />
 
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-4">

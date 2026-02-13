@@ -7,7 +7,7 @@ export default function RedoFocusCheckButton() {
       onClick={() => window.dispatchEvent(new Event('focus-check:redo'))}
       className="text-gray-500 hover:text-gray-900 transition-colors"
     >
-      Focus check opnieuw doen
+      Retake Focus Check
     </button>
   );
 }

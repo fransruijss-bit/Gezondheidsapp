@@ -14,10 +14,10 @@ export default function SearchResults({ results, query }: SearchResultsProps) {
     return (
       <div className="text-center py-12">
         <p className="text-gray-500 text-lg">
-          Geen resultaten gevonden voor &ldquo;{query}&rdquo;
+          No results found for &ldquo;{query}&rdquo;
         </p>
         <p className="text-gray-400 text-sm mt-2">
-          Probeer een andere zoekterm of bekijk de domeinen hieronder.
+          Try another search term or browse the domains below.
         </p>
       </div>
     );
@@ -28,7 +28,7 @@ export default function SearchResults({ results, query }: SearchResultsProps) {
       {topicResults.length > 0 && (
         <div>
           <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
-            Onderwerpen ({topicResults.length})
+            Topics ({topicResults.length})
           </h2>
           <div className="space-y-2">
             {topicResults.map((result, i) => (
@@ -52,7 +52,7 @@ export default function SearchResults({ results, query }: SearchResultsProps) {
       {insightResults.length > 0 && (
         <div>
           <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
-            Inzichten ({insightResults.length})
+            Insights ({insightResults.length})
           </h2>
           <div className="space-y-2">
             {insightResults.map((result, i) => (

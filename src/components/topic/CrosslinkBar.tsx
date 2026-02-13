@@ -17,7 +17,7 @@ export default function CrosslinkBar({ crosslinks, allTopics }: CrosslinkBarProp
   return (
     <div className="mt-8 pt-6 border-t border-gray-200">
       <h3 className="text-sm font-semibold text-gray-900 mb-3">
-        Gerelateerde onderwerpen
+        Related topics
       </h3>
       <div className="flex flex-wrap gap-2">
         {linkedTopics.map((topic) => {

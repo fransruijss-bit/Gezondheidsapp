@@ -19,7 +19,7 @@ export default function TopicCard({ topic, domainSlug }: TopicCardProps) {
           {topic.description}
         </p>
         <div className="mt-3 text-xs text-gray-400">
-          {topic.insights.length} inzichten
+          {topic.insights.length} insights
         </div>
       </div>
     </Link>

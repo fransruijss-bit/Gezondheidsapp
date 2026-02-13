@@ -39,7 +39,7 @@ export default function InsightCard({ insight, domainColor }: InsightCardProps) 
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
-            {showExplanation ? 'Verberg uitleg' : 'Waarom?'}
+            {showExplanation ? 'Hide explanation' : 'Why?'}
           </button>
 
           <button
@@ -54,7 +54,7 @@ export default function InsightCard({ insight, domainColor }: InsightCardProps) 
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
-            {showScience ? 'Verberg wetenschap' : 'Bekijk de wetenschap'}
+            {showScience ? 'Hide science' : 'View the science'}
           </button>
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function InsightCard({ insight, domainColor }: InsightCardProps) 
           <div className="px-5 pb-5 border-t border-gray-100">
             <div className="pt-4">
               <div className="flex items-center gap-2 mb-3">
-                <h3 className="text-sm font-semibold text-gray-900">Wetenschappelijke bronnen</h3>
+                <h3 className="text-sm font-semibold text-gray-900">Scientific sources</h3>
                 <span className="text-xs text-gray-500">{insight.studyTypeSummary}</span>
               </div>
               <div className="space-y-3">

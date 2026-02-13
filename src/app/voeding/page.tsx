@@ -5,17 +5,17 @@ import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import TopicCard from '@/components/topic/TopicCard';
 
 export const metadata: Metadata = {
-  title: 'Voeding',
-  description: 'Ontdek wetenschappelijk onderbouwde inzichten over macronutriënten, darmgezondheid, hydratatie en meer.',
+  title: 'Nutrition',
+  description: 'Discover science-backed insights on macronutrients, gut health, hydration, and more.',
 };
 
-export default function VoedingPage() {
+export default function NutritionPage() {
   const domain = getDomain('voeding')!;
   const topics = getTopicsByDomain('voeding');
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
-      <Breadcrumbs items={[{ label: 'Voeding' }]} />
+      <Breadcrumbs items={[{ label: 'Nutrition' }]} />
 
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-4">

@@ -19,9 +19,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { onderwerp } = await params;
   const topic = getTopicBySlug('voeding', onderwerp);
-  if (!topic) return { title: 'Niet gevonden' };
+  if (!topic) return { title: 'Not found' };
   return {
-    title: `${topic.title} - Voeding`,
+    title: `${topic.title} - Nutrition`,
     description: topic.description,
   };
 }
@@ -37,7 +37,7 @@ export default async function VoedingTopicPage({ params }: PageProps) {
     <div className="max-w-3xl mx-auto px-4 py-8">
       <Breadcrumbs
         items={[
-          { label: 'Voeding', href: '/voeding' },
+          { label: 'Nutrition', href: '/voeding' },
           { label: topic.title },
         ]}
       />

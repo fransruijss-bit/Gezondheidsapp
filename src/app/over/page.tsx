@@ -2,119 +2,96 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Over & Methodologie',
-  description: 'Leer meer over de Gezondheidsencyclopedie, onze methodologie en het evidence-classificatiesysteem.',
+  title: 'About & Methodology',
+  description: 'Learn more about The Healthy Nerd, our methodology, and our evidence classification system.',
 };
 
 export default function OverPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
-      <Breadcrumbs items={[{ label: 'Over & Methodologie' }]} />
+      <Breadcrumbs items={[{ label: 'About & Methodology' }]} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">
-        Over de Gezondheidsencyclopedie
-      </h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-6">About The Healthy Nerd</h1>
 
       <div className="prose-content text-gray-700 space-y-8">
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Wat is dit?</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">What is this?</h2>
           <p>
-            De Gezondheidsencyclopedie is een wetenschappelijk onderbouwd naslagwerk
-            dat complexe gezondheidskennis toegankelijk maakt. We richten ons op drie
-            domeinen: slaap, voeding en beweging.
+            The Healthy Nerd is a science-backed reference that makes complex health knowledge practical and easy to use.
+            We focus on three domains: sleep, nutrition, and movement.
           </p>
           <p>
-            Elk onderwerp is opgebouwd uit drie lagen: een directe actie die je vandaag
-            kunt toepassen, een begrijpelijke uitleg van het mechanisme, en de
-            wetenschappelijke bronnen waar het op gebaseerd is.
+            Each topic is built in three layers: one direct action you can apply today, a clear mechanism explanation,
+            and the scientific sources behind it.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Ons drielagenmodel</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Our three-layer model</h2>
           <div className="space-y-4">
             <div className="bg-blue-50 rounded-lg p-4">
-              <h3 className="font-semibold text-blue-900 mb-1">Laag 1 — De Actie</h3>
+              <h3 className="font-semibold text-blue-900 mb-1">Layer 1 — The Action</h3>
               <p className="text-sm text-blue-800">
-                Eén zin, maximaal 30 woorden. Direct toepasbaar advies dat begint
-                met een werkwoord. Geen jargon, wel specifiek.
+                One sentence, up to 30 words. Actionable advice that starts with a verb. No jargon, but specific.
               </p>
             </div>
             <div className="bg-green-50 rounded-lg p-4">
-              <h3 className="font-semibold text-green-900 mb-1">Laag 2 — De Uitleg</h3>
+              <h3 className="font-semibold text-green-900 mb-1">Layer 2 — The Explanation</h3>
               <p className="text-sm text-green-800">
-                In 2-3 minuten leestijd leggen we uit wat er in je lichaam gebeurt,
-                waarom het uitmaakt, en hoe je het toepast. Met analogieën en
-                begrijpelijke taal.
+                In 2–3 minutes, we explain what happens in your body, why it matters, and how to apply it.
               </p>
             </div>
             <div className="bg-purple-50 rounded-lg p-4">
-              <h3 className="font-semibold text-purple-900 mb-1">Laag 3 — De Wetenschap</h3>
+              <h3 className="font-semibold text-purple-900 mb-1">Layer 3 — The Science</h3>
               <p className="text-sm text-purple-800">
-                De onderliggende wetenschappelijke papers met titel, auteurs, type
-                studie, steekproefgrootte, kernconclusie en een directe link naar
-                het originele paper.
+                The underlying papers with title, authors, study type, sample size, key conclusion, and DOI link.
               </p>
             </div>
           </div>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Evidence-classificatie</h2>
-          <p className="mb-4">
-            Elk inzicht krijgt een evidence-score die aangeeft hoe sterk het
-            wetenschappelijk bewijs is:
-          </p>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Evidence classification</h2>
+          <p className="mb-4">Each insight gets an evidence score based on the strength of supporting research:</p>
           <div className="space-y-3">
             <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 shrink-0">
-                Sterk bewijs
+                Strong evidence
               </span>
-              <p className="text-sm text-gray-700">
-                Meerdere gerandomiseerde gecontroleerde trials (RCTs), meta-analyses
-                en brede wetenschappelijke consensus.
-              </p>
+              <p className="text-sm text-gray-700">Multiple RCTs, meta-analyses, and broad scientific consensus.</p>
             </div>
             <div className="flex items-start gap-3 p-3 bg-yellow-50 rounded-lg">
               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 shrink-0">
-                Matig bewijs
+                Moderate evidence
               </span>
-              <p className="text-sm text-gray-700">
-                Enkele RCTs, consistente observationele studies. Het bewijs is
-                overtuigend maar er is meer onderzoek nodig.
-              </p>
+              <p className="text-sm text-gray-700">Some RCTs and consistent observational studies; promising but not final.</p>
             </div>
             <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800 shrink-0">
-                Opkomend bewijs
+                Emerging evidence
               </span>
-              <p className="text-sm text-gray-700">
-                Beperkte studies, veelbelovende resultaten maar nog niet definitief.
-                Interpreteer met voorzichtigheid.
-              </p>
+              <p className="text-sm text-gray-700">Limited studies with early signals. Interpret cautiously.</p>
             </div>
           </div>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Methodologie</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Methodology</h2>
           <p>
-            Alle content is samengesteld op basis van peer-reviewed wetenschappelijke
-            publicaties, met een focus op onderzoek uit de periode 2016-2026. We
-            prioriteren meta-analyses en RCTs boven observationele studies.
+            Content is compiled from peer-reviewed scientific publications, with a focus on 2016–2026 research.
+            We prioritize meta-analyses and randomized controlled trials over observational studies.
           </p>
           <p>
-            Tegenstrijdige resultaten worden eerlijk benoemd. We geven geen medisch
-            advies — raadpleeg altijd een arts voor persoonlijke gezondheidsvragen.
+            Conflicting findings are presented transparently. We do not provide medical advice—always consult a physician
+            for personal health decisions.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Disclaimer</h2>
           <p className="text-sm text-gray-500">
-            De informatie in deze app is bedoeld als educatief naslagwerk en vervangt
-            geen professioneel medisch advies. Raadpleeg altijd een gekwalificeerde
-            zorgverlener voor diagnose en behandeling van gezondheidsproblemen.
+            This app is educational and does not replace professional medical advice. Always consult a qualified healthcare
+            professional for diagnosis and treatment.
           </p>
         </section>
       </div>
