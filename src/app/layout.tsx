@@ -5,8 +5,8 @@ import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Gezondheidsencyclopedie',
-    template: '%s | Gezondheidsencyclopedie',
+    default: 'Gezondheidsapp',
+    template: '%s | Gezondheidsapp',
   },
   description:
     'Wetenschappelijk onderbouwde gezondheidskennis, toegankelijk gemaakt in drie lagen. Van actionable advies tot de papers zelf.',
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Gezondheidsencyclopedie',
+    title: 'Gezondheidsapp',
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#3B82F6',
+  themeColor: '#4338ca',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
