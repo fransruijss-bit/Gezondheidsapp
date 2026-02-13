@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-slaap: #3B82F6;
+  --color-slaap-light: #DBEAFE;
+  --color-slaap-dark: #1E40AF;
+  --color-voeding: #22C55E;
+  --color-voeding-light: #DCFCE7;
+  --color-voeding-dark: #166534;
+  --color-beweging: #A855F7;
+  --color-beweging-light: #F3E8FF;
+  --color-beweging-dark: #6B21A8;
+}
+
+:root {
+  --background: #FAFAFA;
+  --foreground: #171717;
+  --card-bg: #FFFFFF;
+  --border: #E5E7EB;
+  --muted: #6B7280;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth accordion transitions */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.accordion-content.open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+}
+
+/* Evidence blocks */
+.evidence-block {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.evidence-block span {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+/* Markdown content styling */
+.prose-content p {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.prose-content strong {
+  font-weight: 600;
+}
+
+.prose-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-content li {
+  margin-bottom: 0.25rem;
+  line-height: 1.6;
+}
+
+/* Search highlight */
+mark {
+  background-color: #FEF08A;
+  padding: 0 2px;
+  border-radius: 2px;
+}
