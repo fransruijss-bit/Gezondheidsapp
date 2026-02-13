@@ -9,16 +9,16 @@ interface TopicCardProps {
 
 export default function TopicCard({ topic, domainSlug }: TopicCardProps) {
   return (
-    <Link href={`/${domainSlug}/${topic.slug}`}>
-      <div className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-gray-300 transition-all duration-200 h-full flex flex-col">
+    <Link href={`/${domainSlug}/${topic.slug}`} className="block h-full">
+      <div className="ui-card ui-card-interactive p-5 h-full flex flex-col">
         <div className="flex items-start justify-between gap-2 mb-2">
-          <h3 className="font-semibold text-gray-900">{topic.title}</h3>
+          <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>{topic.title}</h3>
           <EvidenceBadge score={topic.evidenceScore} />
         </div>
-        <p className="text-sm text-gray-600 leading-relaxed flex-1">
+        <p className="text-sm leading-relaxed flex-1" style={{ color: 'var(--text-secondary)' }}>
           {topic.description}
         </p>
-        <div className="mt-3 text-xs text-gray-400">
+        <div className="mt-3 text-xs" style={{ color: 'var(--text-tertiary)' }}>
           {topic.insights.length} inzichten
         </div>
       </div>

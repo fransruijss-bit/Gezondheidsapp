@@ -30,7 +30,8 @@ export default function SearchBar() {
     <form onSubmit={handleSubmit} className="relative w-full">
       <div className="relative">
         <svg
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
+          style={{ color: 'var(--text-tertiary)' }}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -48,7 +49,8 @@ export default function SearchBar() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Zoek onderwerpen, inzichten..."
-          className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+          className="field-base w-full pl-10 pr-4 py-2"
+          aria-label="Zoek onderwerpen"
         />
       </div>
     </form>

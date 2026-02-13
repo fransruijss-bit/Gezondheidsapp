@@ -14,22 +14,22 @@ export default function BewegingPage() {
   const topics = getTopicsByDomain('beweging');
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
+    <div className="app-container py-8 md:py-10">
       <Breadcrumbs items={[{ label: 'Beweging' }]} />
 
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-4xl">{domain.icon}</span>
-          <h1 className="text-3xl font-bold" style={{ color: domain.color }}>
+          <h1 className="text-4xl font-bold" style={{ color: "var(--text-primary)" }}>
             {domain.title}
           </h1>
         </div>
-        <p className="text-gray-600 leading-relaxed max-w-3xl">
+        <p className="leading-relaxed max-w-3xl" style={{ color: "var(--text-secondary)" }}>
           {domain.description}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {topics.map((topic) => (
           <TopicCard key={topic.id} topic={topic} domainSlug="beweging" />
         ))}

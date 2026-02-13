@@ -8,38 +8,29 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
-          <Link href="/" className="font-bold text-lg text-gray-900 shrink-0">
-            Gezondheids<span className="text-slaap">encyclopedie</span>
+    <nav className="sticky top-0 z-50 border-b" style={{ background: 'color-mix(in srgb, var(--surface) 94%, transparent)', borderColor: 'var(--border-subtle)', backdropFilter: 'blur(8px)' }}>
+      <div className="app-container">
+        <div className="flex items-center justify-between h-16 gap-4">
+          <Link href="/" className="font-bold text-lg shrink-0" style={{ color: 'var(--text-primary)' }}>
+            Gezondheids<span style={{ color: 'var(--primary)' }}>app</span>
           </Link>
 
-          <div className="hidden md:block flex-1 max-w-md mx-6">
+          <div className="hidden md:block flex-1 max-w-md mx-4">
             <SearchBar />
           </div>
 
-          <div className="hidden md:flex items-center gap-6 text-sm">
-            <Link href="/slaap" className="text-gray-600 hover:text-slaap transition-colors">
-              🌙 Slaap
-            </Link>
-            <Link href="/voeding" className="text-gray-600 hover:text-voeding transition-colors">
-              🥦 Voeding
-            </Link>
-            <Link href="/beweging" className="text-gray-600 hover:text-beweging transition-colors">
-              🏋️ Beweging
-            </Link>
-            <Link href="/gezondheidsadvies" className="text-gray-600 hover:text-gray-900 transition-colors">
-              ✅ Best advies
-            </Link>
-            <Link href="/over" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Over
-            </Link>
+          <div className="hidden md:flex items-center gap-1 text-sm">
+            <Link href="/slaap" className="nav-link">🌙 Slaap</Link>
+            <Link href="/voeding" className="nav-link">🥦 Voeding</Link>
+            <Link href="/beweging" className="nav-link">🏋️ Beweging</Link>
+            <Link href="/gezondheidsadvies" className="nav-link">✅ Best advies</Link>
+            <Link href="/over" className="nav-link">Over</Link>
           </div>
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 text-gray-600"
+            className="md:hidden p-2 rounded-lg"
+            style={{ color: 'var(--text-secondary)' }}
             aria-label="Menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,48 +43,29 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-100">
+          <div className="md:hidden pb-4 border-t" style={{ borderColor: 'var(--border-subtle)' }}>
             <div className="pt-3 pb-2">
               <SearchBar />
             </div>
             <div className="flex flex-col gap-2 pt-2">
-              <Link
-                href="/slaap"
-                onClick={() => setMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-gray-700 hover:bg-slaap-light transition-colors"
-              >
-                🌙 Slaap
-              </Link>
-              <Link
-                href="/voeding"
-                onClick={() => setMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-gray-700 hover:bg-voeding-light transition-colors"
-              >
-                🥦 Voeding
-              </Link>
-              <Link
-                href="/beweging"
-                onClick={() => setMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-gray-700 hover:bg-beweging-light transition-colors"
-              >
-                🏋️ Beweging
-              </Link>
-              <Link
-                href="/gezondheidsadvies"
-                onClick={() => setMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
-              >
-                ✅ Best advies
-              </Link>
-              <Link
-                href="/over"
-                onClick={() => setMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
-              >
-                Over deze app
-              </Link>
+              {[
+                ['/slaap', '🌙 Slaap'],
+                ['/voeding', '🥦 Voeding'],
+                ['/beweging', '🏋️ Beweging'],
+                ['/gezondheidsadvies', '✅ Best advies'],
+                ['/over', 'Over deze app'],
+              ].map(([href, label]) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className="px-3 py-2 rounded-lg text-sm"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
         )}
