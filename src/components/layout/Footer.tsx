@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RedoFocusCheckButton from '@/components/focus/RedoFocusCheckButton';
 
 export default function Footer() {
   return (
@@ -40,6 +41,9 @@ export default function Footer() {
                 <Link href="/over" className="text-gray-500 hover:text-gray-900 transition-colors">
                   Over & Methodologie
                 </Link>
+              </li>
+              <li>
+                <RedoFocusCheckButton />
               </li>
             </ul>
           </div>
