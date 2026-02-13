@@ -30,6 +30,11 @@ export default function Footer() {
                   🏋️ Beweging
                 </Link>
               </li>
+              <li>
+                <Link href="/gezondheidsadvies" className="text-gray-500 hover:text-gray-900 transition-colors">
+                  ✅ Best advies
+                </Link>
+              </li>
             </ul>
           </div>
 

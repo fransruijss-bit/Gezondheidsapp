@@ -29,6 +29,9 @@ export default function Navbar() {
             <Link href="/beweging" className="text-gray-600 hover:text-beweging transition-colors">
               🏋️ Beweging
             </Link>
+            <Link href="/gezondheidsadvies" className="text-gray-600 hover:text-gray-900 transition-colors">
+              ✅ Best advies
+            </Link>
             <Link href="/over" className="text-gray-600 hover:text-gray-900 transition-colors">
               Over
             </Link>
@@ -76,6 +79,13 @@ export default function Navbar() {
                 className="px-3 py-2 rounded-lg text-gray-700 hover:bg-beweging-light transition-colors"
               >
                 🏋️ Beweging
+              </Link>
+              <Link
+                href="/gezondheidsadvies"
+                onClick={() => setMenuOpen(false)}
+                className="px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+              >
+                ✅ Best advies
               </Link>
               <Link
                 href="/over"

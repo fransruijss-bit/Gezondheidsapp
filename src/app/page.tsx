@@ -16,7 +16,7 @@ export default function HomePage() {
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Van direct toepasbaar advies tot de wetenschappelijke papers.
-            Ontdek wat echt werkt voor je slaap, voeding en beweging.
+            Ontdek wat echt werkt voor je slaap, voeding, beweging en algemeen best gezondheidsadvies.
           </p>
           <div className="mt-8 max-w-md mx-auto">
             <SearchBar />
@@ -37,6 +37,27 @@ export default function HomePage() {
               />
             );
           })}
+        </div>
+      </section>
+
+      {/* Best gezondheidsadvies */}
+      <section className="bg-gray-50 border-t border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 py-12">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+            <p className="text-xs font-semibold tracking-wide uppercase text-gray-500">Nieuw</p>
+            <h2 className="text-2xl font-bold text-gray-900 mt-2">Algemeen best gezondheidsadvies: uitgebreid samengevat</h2>
+            <p className="text-gray-600 mt-3 leading-relaxed">
+              We hebben de belangrijkste pijlers van bewezen gezondheidsoptimalisatie vertaald naar een Nederlandstalig,
+              praktisch en wetenschappelijk onderbouwd overzicht — inclusief slaap, voeding, training, supplementen,
+              metingen en leefomgeving.
+            </p>
+            <a
+              href="/gezondheidsadvies"
+              className="inline-flex mt-5 px-4 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-black transition-colors"
+            >
+              Bekijk best gezondheidsadvies
+            </a>
+          </div>
         </div>
       </section>
 
