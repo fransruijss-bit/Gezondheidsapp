@@ -2,10 +2,12 @@ import { domains } from '@/lib/domains';
 import { getTopicsByDomain } from '@/lib/content';
 import DomainCard from '@/components/domain/DomainCard';
 import SearchBar from '@/components/search/SearchBar';
+import FocusCheckOnboarding from '@/components/focus/FocusCheckOnboarding';
 
 export default function HomePage() {
   return (
     <div>
+      <FocusCheckOnboarding />
       {/* Hero Section */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-4 py-12 md:py-20 text-center">
